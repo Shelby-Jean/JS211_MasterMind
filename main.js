@@ -52,14 +52,14 @@ const generateHint = (guess) =>  {
 const mastermind = (guess) => {
   // solution = 'abcd'; // Comment this out to generate a random solution
   if(guess === solution){
-    return 'You guessed it!';
+    console.log('You guessed it!');
   }
   let hint = generateHint(guess);
   board.push(`${guess}, ${hint}`);
   if(board.length > 9){
-    return `You ran out of turns! The solution was ${solution}.`
+    console.log(`You ran out of turns! The solution was ${solution}.`);
   } else {
-    'Guess again.'
+    console.log('Guess again.');
   }
 }
 
